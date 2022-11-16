@@ -11,6 +11,15 @@
 </head>
 <body>
 <div class="game">
+    <div class="board-container">
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+    <div id="preview"></div>
+        <input id="files" type="file" accept="image/*" multiple>
     <div class="controls">
         <button>Start</button>
         <div class="stats">
@@ -18,10 +27,26 @@
             <div class="timer">time: 0 seg</div>
         </div>
     </div>
+
     <div class="board-container">
         <div class="board" data-dimension="4"></div>
         <div class="win">Ganaste!</div>
     </div>
+    </div>
+
 </div>
 </body>
+<script>
+    const preview = (file) => {
+        const img = document.createElement("img");
+        img.src = URL.createObjectURL(file);  // Object Blob
+        img.alt = file.name;
+        document.querySelector('#preview').append(img);
+    };
+
+    document.querySelector("#files").addEventListener("change", (ev) => {
+        if (!ev.target.files) return; // Do nothing.
+        [...ev.target.files].forEach(preview);
+    });
+</script>
 </html>

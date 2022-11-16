@@ -2,13 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 9- Grupo F</title>
+
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="assets/game.js" defer></script>
 </head>
 <body>
-
-  <label for="subirfotos" class="btn btn-lg-primary">Agregar Imágenes</label>
-  <input onchange="document.getElementById('preview2').src = window.URL.createObjectURL(this.files[0]);previewMultiple(event)" name="archivos" id="subirfotos" multiple hidden type="file">
-
+<div class="game">
+    <div class="controls">
+        <button>Start</button>
+        <div class="stats">
+            <div class="moves">0 movimientos</div>
+            <div class="timer">time: 0 seg</div>
+        </div>
+    </div>
+    <div class="board-container">
+        <div class="board" data-dimension="4"></div>
+        <div class="win">Ganaste!</div>
+    </div>
+</div>
 </body>
-
 </html>

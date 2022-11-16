@@ -125,3 +125,5 @@ button {
 .highlight {
     color: #6f00fc;
 }
+
+#preview img { max-height: 120px; }

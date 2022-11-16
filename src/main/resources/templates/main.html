@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <label for="subirfotos" class="btn btn-lg-primary">Agregar Imágenes</label>
+  <input onchange="document.getElementById('preview2').src = window.URL.createObjectURL(this.files[0]);previewMultiple(event)" name="archivos" id="subirfotos" multiple hidden type="file">
+
+</body>
+
+</html>
